@@ -4,6 +4,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 import { Header } from "./header";
+import { Toaster } from "@/components/ui/toaster"
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,6 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ConvexClientProvider>
+        <Toaster />
         <Header/>
         {children}</ConvexClientProvider>
       </body>
